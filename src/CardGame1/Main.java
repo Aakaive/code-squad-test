@@ -37,7 +37,7 @@ public class Main {
             openCard(Card, selectedCardIdx1, selectedCardIdx2);
             turn++;
 
-            if(Card.get(selectedCardIdx1) == Card.get(selectedCardIdx2)) {
+            if(Card.get(selectedCardIdx1).equals(Card.get(selectedCardIdx2))) {
                 Card.set(selectedCardIdx1, 0);
                 Card.set(selectedCardIdx2, 0);
                 remainCard -= 2;
@@ -54,8 +54,7 @@ public class Main {
     private static List<Integer> shuffleCard(Integer[] deck){
         List<Integer> listDeck = Arrays.asList(deck);
         Collections.shuffle(listDeck);
-        List<Integer> Card = new ArrayList<>(listDeck.subList(0, 18));
-        return Card;
+        return listDeck.subList(0, 18);
     }
 
     private static void showCardTable(List<Integer> Card, Command cmd){
