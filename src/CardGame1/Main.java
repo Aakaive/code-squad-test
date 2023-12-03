@@ -6,6 +6,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Integer[] deck = {1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8};
+
+        /*
         List<Integer> card = Arrays.asList(deck);
         Collections.shuffle(card);
         List<Integer> table = new ArrayList<>(card.subList(0, 18));
@@ -45,6 +47,10 @@ public class Main {
             }
             else if(numX1 == numX2 && numY1 == numY2){
                 System.out.println("같은 위치입니다!!");
+                continue;
+            }
+            else if(table.get(numIdx1) == 0 || table.get(numIdx2) == 0) {
+                System.out.println("\n[이미 맞춘 카드입니다!!]\n");
                 continue;
             }
 
@@ -95,7 +101,7 @@ public class Main {
                     break;
                 }
             }
-        }
+        }*/
 
     }
 }
